@@ -27,6 +27,12 @@ Now when the user moves the mouse over the input while holding CTRL or META (Win
 
 Check out this working example: https://jsfiddle.net/5jmhun8z/
 
+If you want to undo everything, including remove the listeners simply call:
+
+```js
+removeLinkMode(input);
+```
+
 ## License 
 
 Licensed under [MIT](LICENSE).
