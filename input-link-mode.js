@@ -28,6 +28,7 @@
     
     var onInputClick = function onInputClick(e) {
       if (input.isLinkMode) {
+        e.preventDefault();
         var url = input.value;
         if (url.indexOf('http') !== 0) url = 'http://' + url;
         window.open(url, '_blank');
