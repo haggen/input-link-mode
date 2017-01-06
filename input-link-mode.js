@@ -26,9 +26,14 @@
       }
     };
     
-    var onInputClick = function onInputClick(e) {
+    var preventDefaultInLinkMode = function preventDefaultInLinkMode(e) {
       if (input.isLinkMode) {
         e.preventDefault();
+      }
+    };
+    
+    var onInputClick = function onInputClick(e) {
+      if (input.isLinkMode) {
         var url = input.value;
         if (url.indexOf('http') !== 0) url = 'http://' + url;
         window.open(url, '_blank');
@@ -50,6 +55,8 @@
     input.addEventListener('mouseenter', onInputMouseEnter);
     input.addEventListener('mouseout', onInputMouseOut);
     input.addEventListener('click', onInputClick);
+    input.addEventListener('mousedown', preventDefaultInLinkMode);
+    input.addEventListener('mouseup', preventDefaultInLinkMode);
     document.addEventListener('keydown', onDocumentKeyDown);
     document.addEventListener('keyup', onDocumentKeyUp);
 
@@ -57,6 +64,8 @@
       input.addEventListener('mouseenter', onInputMouseEnter);
       input.addEventListener('mouseout', onInputMouseOut);
       input.addEventListener('click', onInputClick);
+      input.addEventListener('mousedown', preventDefaultInLinkMode);
+      input.addEventListener('mouseup', preventDefaultInLinkMode);
       document.addEventListener('keydown', onDocumentKeyDown);
       document.addEventListener('keyup', onDocumentKeyUp);
     };
