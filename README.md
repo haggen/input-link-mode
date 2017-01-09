@@ -7,8 +7,8 @@
 Your user is filing out a form and she has to type (or paste) an URL and she wants to make sure it's working correctly. With this small utility she can simply hold CTRL or META key and click the input. A new tab (or window) will open using the address typed into the input.
 
 - No dependency.
-- Very small and fast, written using modern JavaScript.
-- Easy to use and can also be removed from an input (including listeners).
+- Very small, written using modern JavaScript.
+- Easy to setup and removable (including listeners).
 
 ## Usage
 
